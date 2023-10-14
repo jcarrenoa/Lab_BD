@@ -1,9 +1,8 @@
 import streamlit as sl
 from streamlit_option_menu import option_menu
+from apps.graficas_py import grafica1, grafica2, grafica3, grafica4
 
 def app():
-    sl.write("Graficas")
-    sl.text("Aqui van las graficas")
 
     class MultiApp:
 
@@ -23,20 +22,15 @@ def app():
                     menu_icon = 'cast',
                     orientation = "vertical",
                     default_index=  0,
-        #            styles={
-        #                "container": {"padding": "5!important","background-color":'black'},
-        #    "icon": {"color": "white", "font-size": "23px"}, 
-        #    "nav-link": {"color":"white","font-size": "20px", "text-align": "left", "margin":"0px", "--hover-color": "blue"},
-        #    "nav-link-selected": {"background-color": "#02ab21"},}
                 )
             
             if app == "Grafica #1":
-                sl.text("1")
+                grafica1.app()
             if app == "Grafica #2":
-                sl.text("2")
+                grafica2.app()
             if app == "Grafica #3":
-                sl.text("3")
+                grafica3.app()
             if app == "Grafica #4":
-                sl.text("4")
+                grafica4.app()
                             
         run()     
