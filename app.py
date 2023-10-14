@@ -7,6 +7,8 @@ sl.set_page_config(
     page_title = "BD Lab #1",
 )
 
+#Inicio de la aplicacion
+
 class MultiApp:
 
     def __init__(self):
