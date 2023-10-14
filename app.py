@@ -19,6 +19,8 @@ class MultiApp:
 
     def run():
 
+        #Menu principal (Inicio, Graficas)
+        
         with sl.sidebar:
             app = option_menu(
                 menu_title="Menu",
