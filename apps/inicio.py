@@ -44,6 +44,7 @@ def app():
             ➤ Pandas\n
             ➤ Plotly\n
             ➤ Streamlit\n
+            ➤ Pyobdc\n
             """
         )
         sl.write("***NOTA: La version de python utilizada para este proyecto es la 3.10.10 por limitaciones de algunas dependencias de la libreria Streamlit***")
