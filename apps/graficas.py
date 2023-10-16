@@ -70,6 +70,6 @@ def app(server, database, username, password):
                 grafica3.app(conection)
             if app == "Grafica #4":
                 grafica4.app(conection, self.columnas)
-                            
+              
     appr = MultiApp(server, database, username, password)
     appr.run(appr.connection)
