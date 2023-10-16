@@ -4,13 +4,19 @@ from apps.graficas_py import grafica1, grafica2, grafica3, grafica4
 import pyodbc
 import pandas as pd
 
-def app():
+def app(server, database, username, password):
 
-    class MultiApp:
+    class MultiApp():
 
-        def __init__(self):
+        def __init__(self, server, database, username, password):
             self.apps = []
-            self.connection = pyodbc.connect('DRIVER={SQL Server};SERVER=ARCCESS;DATABASE=US_Accidents ;UID=sa;PWD=123456')
+            #Esta linea corresponde a la conexion a la base de datos de Azure con Python
+            #self.connection = pyodbc.connect('DRIVER={ODBC Driver 18 for SQL Server};SERVER=aaron02.database.windows.net;DATABASE=US_Accidents;UID=administrador;PWD=a123456@')
+
+            #Esta linea corresponde a la conexion a la base de datos local con Python
+            #self.connection = pyodbc.connect('DRIVER={SQL Server};SERVER=ARCCESS;DATABASE=US_Accidents ;UID=sa;PWD=123456')
+            
+            self.connection = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}'+f';SERVER={server};DATABASE={database};UID={username};PWD={password}')
             query_1 = '''with paises(id_pais) as 
             (
                 select distinct a.State
@@ -65,5 +71,5 @@ def app():
             if app == "Grafica #4":
                 grafica4.app(conection, self.columnas)
                             
-    appr = MultiApp()
+    appr = MultiApp(server, database, username, password)
     appr.run(appr.connection)
