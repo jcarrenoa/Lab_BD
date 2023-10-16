@@ -41,4 +41,4 @@ class MultiApp:
         if app == "Graficas":
             graficas.app()
                          
-    run()     
+    run()
