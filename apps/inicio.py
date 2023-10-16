@@ -50,3 +50,12 @@ def app():
             """
         )
         sl.write("***NOTA: La version de python utilizada para este proyecto es la 3.10.10 por limitaciones de algunas dependencias de la libreria Streamlit***")
+
+    with sl.container():
+        sl.write("---")
+        sl.header("Recursos web:")
+        sl.write(
+            """
+            ➤ Data set: Sobhan Moosavi. (2023). *US Accidents (2016 - 2023)* [Data set]. Kaggle. https://doi.org/10.34740/KAGGLE/DS/199387\n
+            ➤ Repositorio: https://github.com/jcarrenoa/Lab_BD.git
+            """)
