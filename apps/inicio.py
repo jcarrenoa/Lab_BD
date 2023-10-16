@@ -6,8 +6,10 @@ def app():
         sl.header("Sobre el Laboratiorio realizado")
         sl.write(
             """
-            En este laboratiorio hecho para la materia "Base de datos"
-            se pueden apreciar el uso de muchos recursos para su respectiva realizacion     
+            El laboratorio realizado en Python utiliza las librerías Pandas, Streamlit, pyodbc y Plotly para crear una página web 
+            interactiva que muestra gráficas basadas en datos de accidentes en los Estados Unidos. Los usuarios pueden explorar y 
+            analizar estos datos de manera dinámica, aplicar filtros interactivos y obtener información detallada sobre la frecuencia y 
+            naturaleza de los accidentes.    
             """
         )
     
