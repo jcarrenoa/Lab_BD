@@ -4,6 +4,5 @@ Pillow==10.0.1
 plotly==5.17.0
 pyarrow==13.0.0
 pyodbc==5.0.1
-python-dateutil==2.8.2
 streamlit==1.27.2
 streamlit-option-menu==0.3.6
