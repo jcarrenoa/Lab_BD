@@ -36,6 +36,10 @@ def app():
                         'WY': 'Wyoming'}
             self.state_codes = {code[0]: state_codes[code[0]] for code in state_code}
             self.state_names = {v: k for k, v in self.state_codes.items()}
+            query_columnas = '''select a.Humidity, a.Precipitation_in, a.Pressure_in, a.Severity, a.Temperature_F, a.Visibility_mi,
+                                a.Wind_Chill_F, a.Wind_Speed_mph
+                                from Accidents a'''
+            self.columnas = pd.read_sql_query(query_columnas, self.connection).columns.tolist()
 
         def add_app(self, title, funtion):
             self.apps.append({"title": title, "funtion": funtion})
@@ -57,9 +61,9 @@ def app():
             if app == "Grafica #2":
                 grafica2.app(conection, self.state_codes, self.state_names)
             if app == "Grafica #3":
-                grafica3.app()
+                grafica3.app(conection)
             if app == "Grafica #4":
-                grafica4.app(conection)
+                grafica4.app(conection, self.columnas)
                             
     appr = MultiApp()
     appr.run(appr.connection)
