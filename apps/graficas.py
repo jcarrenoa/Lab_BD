@@ -10,7 +10,7 @@ def app():
 
         def __init__(self):
             self.apps = []
-            self.connection = pyodbc.connect('DRIVER={SQL Server};SERVER=ARCCESS;DATABASE=US_Accidents ;UID=sa;PWD=123456')
+            self.connection = pyodbc.connect('Driver={ODBC Driver 18 for SQL Server};Server=tcp:aaron02.database.windows.net,1433;Database=US_Accidents;Uid=administrador;Pwd=a123456@;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;')
             query_1 = '''with paises(id_pais) as 
             (
                 select distinct a.State
